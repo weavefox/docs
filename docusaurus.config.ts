@@ -42,18 +42,7 @@ const config: Config = {
           sidebarPath: './sidebars.ts',
           editUrl: 'https://github.com/weavefox/docs/tree/main/docs/',
         },
-        blog: {
-          showReadingTime: true,
-          feedOptions: {
-            type: ['rss', 'atom'],
-            xslt: true,
-          },
-          editUrl: 'https://github.com/weavefox/docs/tree/main/docs/',
-          // Useful options to enforce blogging best practices
-          onInlineTags: 'warn',
-          onInlineAuthors: 'warn',
-          onUntruncatedBlogPosts: 'warn',
-        },
+        blog: false,
         theme: {
           customCss: './src/css/custom.css',
         },
@@ -63,7 +52,8 @@ const config: Config = {
 
   themeConfig: {
     // Replace with your project's social card
-    image: 'https://mdn.alipayobjects.com/huamei_4qpv3u/afts/img/AW2fQKp5vEIAAAAAQMAAAAgAeocTAQFr/original',
+    image:
+      'https://mdn.alipayobjects.com/huamei_4qpv3u/afts/img/AW2fQKp5vEIAAAAAQMAAAAgAeocTAQFr/original',
     colorMode: {
       respectPrefersColorScheme: true,
     },
@@ -75,14 +65,7 @@ const config: Config = {
       },
       items: [
         {
-          type: 'docSidebar',
-          sidebarId: 'tutorialSidebar',
-          position: 'left',
-          label: 'Tutorial',
-        },
-        { to: '/blog', label: 'Blog', position: 'left' },
-        {
-          href: 'https://github.com/weavefox/docs',
+          href: 'https://github.com/weavefox/weavefox',
           label: 'GitHub',
           position: 'right',
         },
@@ -92,46 +75,46 @@ const config: Config = {
       style: 'dark',
       links: [
         {
-          title: 'Docs',
+          title: '文档',
           items: [
             {
-              label: 'Tutorial',
-              to: '/intro',
+              label: '入门指南',
+              to: '/',
             },
           ],
         },
         {
-          title: 'Community',
+          title: '更多',
           items: [
             {
-              label: 'Stack Overflow',
-              href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+              label: '隐私政策',
+              href: 'https://render.alipay.com/p/c/180021120000001078/index.html?agreementId=AG01001502',
             },
             {
-              label: 'Discord',
-              href: 'https://discordapp.com/invite/docusaurus',
-            },
-            {
-              label: 'X',
-              href: 'https://x.com/docusaurus',
-            },
-          ],
-        },
-        {
-          title: 'More',
-          items: [
-            {
-              label: 'Blog',
-              to: '/blog',
+              label: '服务条款',
+              href: 'https://render.alipay.com/p/c/180021120000001078/index.html?agreementId=AG01001502',
             },
             {
               label: 'GitHub',
-              href: 'https://github.com/weavefox/docs',
+              href: 'https://github.com/weavefox/weavefox',
+            },
+          ],
+        },
+        {
+          title: '关注我们',
+          items: [
+            {
+              label: 'X (Twitter)',
+              href: 'https://x.com/weavefox',
+            },
+            {
+              label: '微信公众号',
+              href: 'https://mdn.alipayobjects.com/huamei_4qpv3u/afts/img/HF8gRKOGD3oAAAAAQIAAAAgAeocTAQFr/original',
             },
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} WeaveFox. All rights reserved.`,
+      copyright: `© ${new Date().getFullYear()} SENSE CREATIVE PLATFORM. POWERED BY NEXT-GEN AIGC. 沪ICP备2022025902号-15`,
     },
     prism: {
       theme: prismThemes.github,
