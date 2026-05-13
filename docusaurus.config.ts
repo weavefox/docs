@@ -14,6 +14,7 @@ const config: Config = {
     v4: true, // Improve compatibility with the upcoming Docusaurus v4
   },
 
+  // Canonical URL for SEO
   url: 'https://weavefox.github.io',
   baseUrl: '/docs/',
 
@@ -42,7 +43,22 @@ const config: Config = {
           sidebarPath: './sidebars.ts',
           editUrl: 'https://github.com/weavefox/docs/tree/main/docs/',
         },
-        blog: false,
+        blog: {
+          routeBasePath: 'blog',
+          blogTitle: 'WeaveFox 博客',
+          blogDescription: 'WeaveFox 官方博客，分享产品更新、技术文章和最佳实践',
+          showReadingTime: true,
+          blogSidebarTitle: '所有文章',
+          blogSidebarCount: 'ALL',
+          postsPerPage: 10,
+          feedOptions: {
+            type: ['rss', 'atom'],
+            title: 'WeaveFox 博客',
+            description: 'WeaveFox 官方博客最新文章',
+          },
+          showLastUpdateTime: true,
+          showLastUpdateAuthor: true,
+        },
         theme: {
           customCss: './src/css/custom.css',
         },
@@ -50,10 +66,32 @@ const config: Config = {
     ],
   ],
 
+  clientModules: ['./src/clientModules/navbar-scroll-shadow'],
+
   themeConfig: {
-    // Replace with your project's social card
+    // SEO social card
     image:
       'https://mdn.alipayobjects.com/huamei_4qpv3u/afts/img/AW2fQKp5vEIAAAAAQMAAAAgAeocTAQFr/original',
+
+    // Structured data for organization (JSON-LD)
+    structuredData: {
+      '@context': 'https://schema.org',
+      '@type': 'Organization',
+      name: 'WeaveFox',
+      url: 'https://www.weavefox.cn',
+      logo: 'https://mdn.alipayobjects.com/huamei_4qpv3u/afts/img/AW2fQKp5vEIAAAAAQMAAAAgAeocTAQFr/original',
+      sameAs: ['https://x.com/weavefox', 'https://github.com/weavefox/weavefox'],
+    },
+
+    // Announcement bar for SEO announcements (optional)
+    // announcementBar: {
+    //   id: 'seo_announcement',
+    //   content: 'WeaveFox 官方文档全面升级！',
+    //   backgroundColor: '#1890ff',
+    //   textColor: '#ffffff',
+    //   isCloseable: true,
+    // },
+
     colorMode: {
       respectPrefersColorScheme: true,
     },
@@ -65,6 +103,30 @@ const config: Config = {
       },
       items: [
         {
+          type: 'doc',
+          docId: 'intro/getting-started/welcome',
+          label: '介绍',
+        },
+        {
+          type: 'doc',
+          docId: 'features/core/overview',
+          label: '产品功能',
+        },
+        {
+          type: 'doc',
+          docId: 'integrations/overview',
+          label: '集成服务',
+        },
+        {
+          type: 'doc',
+          docId: 'best-practices/overview',
+          label: '最佳实践',
+        },
+        {
+          to: '/blog',
+          label: '博客',
+        },
+        {
           href: 'https://github.com/weavefox/weavefox',
           label: 'GitHub',
           position: 'right',
@@ -74,6 +136,15 @@ const config: Config = {
     footer: {
       style: 'dark',
       links: [
+        {
+          title: 'WeaveFox',
+          items: [
+            {
+              label: '你的创意，值得让全世界看到',
+              to: 'https://www.weavefox.cn/',
+            },
+          ],
+        },
         {
           title: '文档',
           items: [
@@ -94,27 +165,27 @@ const config: Config = {
               label: '服务条款',
               href: 'https://render.alipay.com/p/c/180021120000001078/index.html?agreementId=AG01001502',
             },
-            {
-              label: 'GitHub',
-              href: 'https://github.com/weavefox/weavefox',
-            },
           ],
         },
         {
           title: '关注我们',
           items: [
             {
-              label: 'X (Twitter)',
-              href: 'https://x.com/weavefox',
-            },
-            {
               label: '微信公众号',
               href: 'https://mdn.alipayobjects.com/huamei_4qpv3u/afts/img/HF8gRKOGD3oAAAAAQIAAAAgAeocTAQFr/original',
+            },
+            {
+              label: 'GitHub',
+              href: 'https://github.com/weavefox/weavefox',
+            },
+            {
+              label: 'X (Twitter)',
+              href: 'https://x.com/weavefox',
             },
           ],
         },
       ],
-      copyright: `© ${new Date().getFullYear()} SENSE CREATIVE PLATFORM. POWERED BY NEXT-GEN AIGC. 沪ICP备2022025902号-15`,
+      copyright: '沪 ICP 备 2022025902 号-15',
     },
     prism: {
       theme: prismThemes.github,
