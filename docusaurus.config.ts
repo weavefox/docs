@@ -42,12 +42,13 @@ const config: Config = {
           routeBasePath: '/',
           sidebarPath: './sidebars.ts',
           editUrl: 'https://github.com/weavefox/docs/tree/main/docs/',
+          breadcrumbs: false,
+          showLastUpdateTime: true,
         },
         blog: {
           routeBasePath: 'blog',
           blogTitle: 'WeaveFox 博客',
           blogDescription: 'WeaveFox 官方博客，分享产品更新、技术文章和最佳实践',
-          showReadingTime: true,
           blogSidebarTitle: '所有文章',
           blogSidebarCount: 'ALL',
           postsPerPage: 10,
@@ -56,8 +57,9 @@ const config: Config = {
             title: 'WeaveFox 博客',
             description: 'WeaveFox 官方博客最新文章',
           },
+          showReadingTime: true,
           showLastUpdateTime: true,
-          showLastUpdateAuthor: true,
+          // showLastUpdateAuthor: true,
         },
         theme: {
           customCss: './src/css/custom.css',
@@ -67,6 +69,20 @@ const config: Config = {
   ],
 
   clientModules: ['./src/clientModules/navbar-scroll-shadow'],
+
+  themes: [
+    [
+      '@easyops-cn/docusaurus-search-local',
+      {
+        hashed: true,
+        language: ['en', 'zh'],
+        docsRouteBasePath: '/',
+        indexBlog: false,
+        docsDir: './docs',
+        ignoreFiles: [],
+      },
+    ],
+  ],
 
   themeConfig: {
     // SEO social card
