@@ -15,8 +15,8 @@ const config: Config = {
   },
 
   // Canonical URL for SEO
-  url: 'https://weavefox.github.io',
-  baseUrl: '/docs/',
+  url: 'https://docs.weavefox.ai',
+  baseUrl: '/',
 
   // https://docusaurus.io/docs/deployment#deploying-to-github-pages
   organizationName: 'weavefox',
