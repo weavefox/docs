@@ -35,6 +35,9 @@ jobs:
       - name: Build website
         run: pnpm build
 
+      - name: Write CNAME
+        run: echo "docs.weavefox.ai" > build/CNAME
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
