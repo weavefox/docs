@@ -17,6 +17,8 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      BUILD_DIR: build
     steps:
       - uses: actions/checkout@v4
 
@@ -36,12 +38,12 @@ jobs:
         run: pnpm build
 
       - name: Write CNAME
-        run: echo "docs.weavefox.ai" > build/CNAME
+        run: echo "docs.weavefox.ai" > "${BUILD_DIR}/CNAME"
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: build
+          path: ${{ env.BUILD_DIR }}
 
   deploy:
     environment:
