@@ -2,7 +2,7 @@
 
 🦊 Official guide for [Weavefox](https://www.weavefox.cn/): Mastering prompt engineering to build, deploy, and scale full-stack applications with AI.
 
-![WeaveFox Home](/img/weavefox-home.png)
+![WeaveFox Home](/static/img/weavefox-home.png)
 
 > This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
 

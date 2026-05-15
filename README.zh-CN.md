@@ -2,7 +2,7 @@
 
 🦊 [WeaveFox](https://www.weavefox.cn/) 官方指南：掌握提示工程，构建、部署和扩展 AI 全栈应用。
 
-![WeaveFox 首页](/img/weavefox-home.png)
+![WeaveFox 首页](/static/img/weavefox-home.png)
 
 > 本网站使用 [Docusaurus](https://docusaurus.io/) 构建，一个现代化的静态网站生成器。
 
