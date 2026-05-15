@@ -4,8 +4,6 @@
 
 ![WeaveFox 首页](/static/img/weavefox-home.png)
 
-> 本网站使用 [Docusaurus](https://docusaurus.io/) 构建，一个现代化的静态网站生成器。
-
 ## 安装
 
 ```bash
