@@ -43,7 +43,7 @@ const config: Config = {
           sidebarPath: './sidebars.ts',
           editUrl: 'https://github.com/weavefox/docs/tree/main/docs/',
           breadcrumbs: false,
-          showLastUpdateTime: true,
+          showLastUpdateTime: false,
         },
         blog: {
           routeBasePath: 'blog',
@@ -125,7 +125,7 @@ const config: Config = {
         },
         {
           type: 'doc',
-          docId: 'features/core/overview',
+          docId: 'features/build/vibe-coding',
           label: '产品功能',
         },
         {
