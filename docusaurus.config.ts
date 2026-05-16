@@ -41,7 +41,7 @@ const config: Config = {
         docs: {
           routeBasePath: '/',
           sidebarPath: './sidebars.ts',
-          editUrl: 'https://github.com/weavefox/docs/tree/main/docs/',
+          // editUrl: 'https://github.com/weavefox/docs/tree/main/docs/',
           breadcrumbs: false,
           showLastUpdateTime: false,
         },
@@ -49,7 +49,7 @@ const config: Config = {
           routeBasePath: 'blog',
           blogTitle: 'WeaveFox 博客',
           blogDescription: 'WeaveFox 官方博客，分享产品更新、技术文章和最佳实践',
-          blogSidebarTitle: '所有文章',
+          blogSidebarTitle: '所有发布',
           blogSidebarCount: 'ALL',
           postsPerPage: 10,
           feedOptions: {
@@ -85,11 +85,21 @@ const config: Config = {
   ],
 
   themeConfig: {
-    // SEO social card
+    // SEO social card - 在社交媒体分享时显示的卡片图片
     image:
       'https://mdn.alipayobjects.com/huamei_4qpv3u/afts/img/AW2fQKp5vEIAAAAAQMAAAAgAeocTAQFr/original',
 
-    // Structured data for organization (JSON-LD)
+    // SEO: 全局 meta 标签
+    metadata: [
+      { name: 'keywords', content: 'WeaveFox, AI 编程，创意开发，Vibe Coding，应用开发，人工智能' },
+      { name: 'author', content: 'WeaveFox' },
+      { property: 'og:type', content: 'website' },
+      { property: 'og:site_name', content: 'WeaveFox Docs' },
+      { name: 'twitter:card', content: 'summary_large_image' },
+      { name: 'twitter:site', content: '@weavefox' },
+    ],
+
+    // 结构化数据 (JSON-LD) - 帮助搜索引擎理解网站内容
     structuredData: {
       '@context': 'https://schema.org',
       '@type': 'Organization',
@@ -143,10 +153,15 @@ const config: Config = {
           label: '博客',
         },
         {
-          href: 'https://github.com/weavefox/weavefox',
-          label: 'GitHub',
+          href: 'https://changelog.app.weavefox.cn/',
+          label: '产品更新动态',
           position: 'right',
         },
+        // {
+        //   href: 'https://github.com/weavefox/weavefox',
+        //   label: 'GitHub',
+        //   position: 'right',
+        // },
       ],
     },
     footer: {
@@ -156,8 +171,7 @@ const config: Config = {
           title: 'WeaveFox',
           items: [
             {
-              label: '你的创意，值得让全世界看到',
-              to: 'https://www.weavefox.cn/',
+              html: '<a href="https://www.weavefox.cn" target="_blank"><b>你的创意，值得让全世界看到</b></a>',
             },
           ],
         },
@@ -167,6 +181,10 @@ const config: Config = {
             {
               label: '入门指南',
               to: '/',
+            },
+            {
+              label: '产品更新动态',
+              href: 'https://changelog.app.weavefox.cn/',
             },
           ],
         },

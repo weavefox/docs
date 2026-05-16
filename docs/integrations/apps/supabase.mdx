@@ -1,6 +1,64 @@
 ---
 title: Supabase
-description: 使用 Supabase 作为后端服务
+description: 连接 Supabase 数据库，实现数据持久化存储和实时同步功能
+sidebar_position: 2
 ---
 
-> WIP
+# Supabase
+
+## 使用场景
+
+- 全栈应用后端
+- 实时协作应用
+- 用户认证系统
+- 文件管理服务
+
+## 如何使用
+
+### 前置条件
+
+1. 拥有 Supabase 账号，如果没有请前往 [Supabase 官网](https://supabase.com/) 注册
+2. 创建一个 Supabase 项目
+
+### 连接 Supabase 项目
+
+点击卡片上的「连接」按钮，通过 OAuth 授权连接您的 Supabase 项目：
+
+1. 点击「连接」按钮
+2. 在弹出窗口中登录 Supabase 账号
+3. 选择要连接的项目
+4. 授权完成后自动返回
+
+### 使用案例
+
+#### 1. Todo List 应用
+
+在对话中说：「帮我创建一个 Todo List 应用，使用 Supabase 数据库存储任务数据」
+
+- 自动创建 `todos` 表结构
+- 实现任务的增删改查功能
+- 支持任务状态标记和排序
+
+#### 2. 用户认证系统
+
+在对话中说：「创建一个带用户登录注册的页面，使用 Supabase 认证」
+
+- 集成 Supabase Auth 服务
+- 支持邮箱/密码登录
+- 支持第三方 OAuth 登录（Google、GitHub 等）
+
+#### 3. 实时聊天应用
+
+在对话中说：「创建一个实时聊天室，使用 Supabase 实时订阅功能」
+
+- 利用 Supabase Realtime 实现消息实时同步
+- 支持多用户在线聊天
+- 消息持久化存储
+
+#### 4. 文件管理服务
+
+在对话中说：「创建一个文件上传管理页面，使用 Supabase Storage」
+
+- 集成 Supabase Storage 存储服务
+- 支持图片、文档等文件上传
+- 自动生成文件访问 URL

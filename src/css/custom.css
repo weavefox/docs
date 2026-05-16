@@ -41,6 +41,11 @@
   border-right: none;
 }
 
+/* 左侧导航栏默认不加粗 */
+.menu__link {
+  font-weight: 400;
+}
+
 .sidebar-section-header > .menu__list-item-collapsible,
 .sidebar-section-header > .menu__list-item-collapsible--active {
   background: none !important;
@@ -50,10 +55,10 @@
 .sidebar-section-header > .menu__list-item-collapsible > .menu__link:hover,
 .sidebar-section-header > .menu__list-item-collapsible > .menu__link--active {
   font-size: 0.75rem;
-  font-weight: 700;
+  font-weight: 700 !important;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  color: var(--ifm-color-emphasis-600);
+  color: var(--ifm-color-emphasis-800);
   pointer-events: none;
   cursor: default;
   background: none !important;
