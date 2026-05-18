@@ -1,0 +1,110 @@
+---
+title: WeaveFox，个人创作者的 AI 应用助手
+description: WeaveFox 是一个 AI 驱动的应用创作平台，让创意不再止于草稿，用一杯咖啡的时间将想法变成现实。
+authors: weavefox
+tags: &ref_0
+  - Vibe Coding
+  - WeaveFox
+  - AIGC 创作
+  - Web 应用
+  - 智能助手
+---
+
+用 2 个多月的时间，将 WeaveFox 重新 Vibe Coding 了一遍，并修改了一些定位和产品设计落，给大家介绍一下新的 [WeaveFox](https://www.weavefox.cn/)。
+
+## 产品定位
+
+WeaveFox 是一个 **AI 驱动的应用创作平台**，让创意不再止于草稿，用一杯咖啡的时间将想法变成现实。
+
+这个产品其实已经在社区有 2 年的时间，但是定位一直在变化：
+
+- 最开始，期望做成图生代码，<u>将过去的 D2C 用大模型来重构和实现</u>。但是模型发展太快，基础多模态模型都具备了这些能力。
+- 然后，基于 <u>AI 做自然语言对话和代码生成</u>，一句话就可以生成一个页面 UI，并且可以下载代码，或者提交 GitHub，集成一些工程能力，想让开发者的效率 10x 提升。但是随着模型的发展，Agentic 工程越来越规范化，能力也越来越强，逐步被模型取代。
+- 考虑到给开发者 Coding 提效已经是基础模型默认的目标和能力，所以 WeaveFox 转而做面向于用户的 应用创作平台。期望<u>通过平台能力给 OPC、个人开发者，甚至非技术人员提供便捷全栈应用制作和部署能力</u>。
+
+![weavefox](https://mdn.alipayobjects.com/huamei_4qpv3u/afts/img/lK2WQZVf9esAAAAAcnAAAAgAeocTAQFr/original)
+
+基于这个定位，花了 2 个多月的时间，Vibe Coding 了这个产品，期望和模型发展相向而行，目前还没有考虑收费，所以完全免费使用。
+
+{/* truncate */}
+
+## 产品愿景
+
+**让灵感与想法，即刻呈现。**
+
+WeaveFox 希望成为每个创作者的得力助手，让创意不再停留在纸面，而是快速变成可运行、可分享、可迭代的实际应用。
+
+未来，我们也期望通过 WeaveFox 产品，让创作者的想法和创意，能直接变现，让 OPC 快速找到自己的第二增长曲线。
+
+_WeaveFox Lab — 你的创意，值得让全世界看到_
+
+## 核心功能
+
+### AI 应用创作和生成
+
+**对话即创作** —— 用自然语言描述想法，AI 帮你快速构建应用。这部分目前做的比较简洁，产品上提供了两个入口：灵感输入，应用生成。
+
+- **灵感输入**，用户输入想法、问题、痛点，平台帮忙澄清和推荐做法。
+
+从调研看，用户（特别是非技术的用户）其实大部分情况只知道我有什么痛点，但是不知道应该使用技术做什么？所以产品提供了一个小小的功能，就是将用户输入的想法、问题、痛点，澄清和推荐出具体的应用简洁，用户 选择合适的应用之后，才开始进行下一步应用生成。
+
+例如：用户的问题是“容易忘记喝水”，平台帮忙将这个问题，转化成应用。
+
+![weavefox-灵感](https://mdn.alipayobjects.com/huamei_4qpv3u/afts/img/ix5WRpQJJWcAAAAAZnAAAAgAeocTAQFr/original)
+
+- **应用生成**，直接输入你的创意描述，AI 理解并生成应用。
+
+这部分就是自然语言进行对话生成应用，包括软件原型、实用工具、落地页、个人品牌等等。这部分产品功能上没有什么多说的，纯粹的 AI 大模型能力配合一套 Agentic 工程。
+
+![weavefox-应用制作](https://mdn.alipayobjects.com/huamei_4qpv3u/afts/img/VO1LSqIlt7cAAAAAUeAAAAgAeocTAQFr/original)
+
+只不过在这个 Agentic，我们搭配了不少的工具，Skill，服务，让生成的应用视觉更符合用户预期，也让应用支持各种后台应用需要的服务能力。这部分在下一章节介绍。
+
+### 扩展能力，包括技能（Skills）和服务系统
+
+如果仅仅是让 AI 做一些纯静态的页面和工具的话，那只能做一些玩具级别的应用，真正能让产品做出来的应用，让用户觉得可用，一定是需要具备全栈的能力。所以在产品上增加了扩展能力，主要包括两部分：
+
+- **技能 Skill**：主要关注于应用产品能力的设计，视觉风格的定义，让制作出来的应用在功能，视觉上是符合甚至超出用户期望的。
+
+![weavefox-skill](https://mdn.alipayobjects.com/huamei_4qpv3u/afts/img/0LMYTqTh07EAAAAAYMAAAAgAeocTAQFr/original)
+
+目前平台打开有 20 中 Skill，还在开发者，不多但是一定是精品。现在社区成千上万的 Skill 问题不在于数量了，而在于使用效果的臻选，以及什么场景使用什么 Skill 了。
+
+- **服务 Service**：主要关注于应用的全栈能力，也就是我们过去使用各种云服务完成一个应用的开发，现在都会在 WeaveFox 的服务中包含进来，这部分包括：
+  - 数据库
+  - 登录，用户体系
+  - OSS
+  - LLM（文本，多模态，OCR）
+  - 邮件通知等
+  - ……
+
+![weavefox-service](https://mdn.alipayobjects.com/huamei_4qpv3u/afts/img/VI6OTZWjOq4AAAAAWdAAAAgAeocTAQFr/original)
+
+目前基本涵盖了大部分场景，如果有其他需求，可以联系我们，评审过后会尽快添加。另外，近期我们也在做 AI 支付，这样做出来的应用，就可以实现支付，让应用的创作者也能真正赚钱。
+
+### 应用管理与协作
+
+WeaveFox 目前已经具备有非常完整的开发流程，从创作到部署，一站式管理。
+
+首先在应用制作部分，功能完善，包括了：基本的创作对话，数据分析（开发中），云服务管理，应用设置等功能。可以轻松的掌控自己的应用。
+
+![weavefox-setting](https://mdn.alipayobjects.com/huamei_4qpv3u/afts/img/qDz8Q4w2kh4AAAAAgBAAAAgAeocTAQFr/original)
+
+另外，考虑到用户可能是一个小团队协作开发，所以我们增加了协作能力，支持多人一起共同创作应用。
+
+![weavefox-collaborator](https://mdn.alipayobjects.com/huamei_4qpv3u/afts/img/fgIJSLVDA6sAAAAAgBAAAAgAeocTAQFr/fmt.avif)
+
+### 发现广场
+
+为让创作者生成的应用，能被人看见，我们增加了**探索与分享的社区** —— 看看大家正在创造什么。在这可以看到最优质的公开应用，以及最活跃，最有想法的创作者，可以互相借鉴和分享，未来我们还会给优质的想法，给于一些产品周边小奖励。
+
+![weavefox-trending](https://mdn.alipayobjects.com/huamei_4qpv3u/afts/img/kODxQK1ziqoAAAAAgCAAAAgAeocTAQFr/original)
+
+---
+
+## 了解更多
+
+- **产品官网**：[https://www.weavefox.cn/](https://www.weavefox.cn/)
+- **产品动态**：[https://changelog.app.weavefox.cn/](https://changelog.app.weavefox.cn/)
+- **应用发现**：[https://www.weavefox.cn/discover](https://www.weavefox.cn/discover)
+- 微信公众号：WeaveFox和他的朋友们
