@@ -92,6 +92,7 @@ const config: Config = {
     // SEO: 全局 meta 标签
     metadata: [
       { name: 'baidu-site-verification', content: 'codeva-os2v9vP2vB' },
+      { name: 'google-site-verification', content: '3hJOAEBePt4f5-ERzrzp1oe7e0aC2oEQ8aE8Hmy2cME' },
       { name: 'keywords', content: 'WeaveFox, AI 编程，创意开发，Vibe Coding，应用开发，人工智能' },
       { name: 'author', content: 'WeaveFox' },
       { property: 'og:type', content: 'website' },
