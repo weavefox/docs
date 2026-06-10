@@ -1,0 +1,215 @@
+---
+title: 支付宝电脑网站支付
+description: 支付宝电脑网站支付产品开通流程与接入配置
+sidebar_position: 12
+---
+
+# 支付宝电脑网站支付
+
+支持支付宝电脑网站支付，适用于 PC 端网页支付场景。
+
+## 使用场景
+
+- **知识付费**：付费内容解锁、课程购买
+- **电商交易**：商品在线支付
+- **服务订购**：会员充值、服务购买
+
+## 如何使用
+
+在对话中说：应用集成支付宝支付功能
+
+## 开通流程
+
+### 第1步：选择支付产品
+
+| 流程 | 流程示意图 | 流程说明 |
+| :---: | :---: | --- |
+| **1** | ![image.png](https://env-00jxubkh7n2q.normal.cloudstatic.cn/weavefox/oss-service/apps/ivhzajp50hzo/3d22c080-9c38-443e-9960-8b51e6645124.png) | 注册/登录支付宝商家平台。如遇以下页面，选择登录**个人账号**。 |
+| **2** | ![image.png](https://env-00jxubkh7n2q.normal.cloudstatic.cn/weavefox/oss-service/apps/ivhzajp50hzo/41b9f90e-6890-46a2-924a-23e7f92a9e5b.png) | 进入「[产品中心](https://b.alipay.com/page/product-workspace/all-product)」，选择我有电脑网站。 |
+| **3** | ![image.png](https://env-00jxubkh7n2q.normal.cloudstatic.cn/weavefox/oss-service/apps/ivhzajp50hzo/d7af3564-e4f1-4e24-a711-9cd03fa01483.png) | 点击「立即开通」。 |
+
+### 第2步：上传开通资料
+
+| 流程 | 流程示意图 | 流程说明 |
+| :---: | :---: | --- |
+| **4** | ![image.png](https://env-00jxubkh7n2q.normal.cloudstatic.cn/weavefox/oss-service/apps/ivhzajp50hzo/3c98c010-05b9-4888-9ada-b9146660ab01.png) <br/> ![image.png](https://env-00jxubkh7n2q.normal.cloudstatic.cn/weavefox/oss-service/apps/ivhzajp50hzo/b1f32d14-34ec-40fc-89c1-bc2ac8d31776.png) | 根据开通要求填写、上传相关信息。以电脑网站支付为例。<br/>**注意：营业执照非必须上传** |
+| **5** | ![image.png](https://env-00jxubkh7n2q.normal.cloudstatic.cn/weavefox/oss-service/apps/ivhzajp50hzo/35d57238-3ff3-4544-ba5f-b3db4f86d50c.png) <br/> ![image.png](https://env-00jxubkh7n2q.normal.cloudstatic.cn/weavefox/oss-service/apps/ivhzajp50hzo/22890602-a0aa-46f5-a59a-ea4be5fa48c7.png) | 申请后，可回到对应页面查看审核状态。以电脑网站支付为例，如审核完毕则状态为「已开通」，且会收到短信提醒。<br/>*如果需要提升收款额度，可以进一步提交资质申请，如图「补全信息」或「提升额度」。* |
+
+### 第3步：创建应用
+
+| 流程 | 流程示意图 | 流程说明 |
+| :---: | :---: | --- |
+| **6** | ![image.png](https://env-00jxubkh7n2q.normal.cloudstatic.cn/weavefox/oss-service/apps/ivhzajp50hzo/4477146a-3e51-4c4d-814b-1d5869184851.png) | 进入支付宝开放平台-控制台 [https://open.alipay.com/develop/manage](https://open.alipay.com/develop/manage)<br/>按需选择应用类型，创建应用。以网页/移动应用为例。<br/>*创建的应用须与签约的支付产品一致，否则无法收款。* |
+| **7** | ![image.png](https://env-00jxubkh7n2q.normal.cloudstatic.cn/weavefox/oss-service/apps/ivhzajp50hzo/7a0c909c-1f9b-4141-ab42-06964d07a8ba.png) | 填写创建应用相关信息。 |
+
+### 第4步：配置秘钥
+
+| 流程 | 流程示意图 | 流程说明 |
+| :---: | :---: | --- |
+| **8** | ![image.png](https://env-00jxubkh7n2q.normal.cloudstatic.cn/weavefox/oss-service/apps/ivhzajp50hzo/20dec513-7bec-457b-993d-0145d11883b4.png) | 配置接口加签方式：密钥或者证书 |
+| **9** | ![image.png](https://env-00jxubkh7n2q.normal.cloudstatic.cn/weavefox/oss-service/apps/ivhzajp50hzo/7e49e417-8a90-4828-b0a6-b888e9a66e58.png) | 下载并安装密钥工具。 |
+| **10** | ![image.png](https://env-00jxubkh7n2q.normal.cloudstatic.cn/weavefox/oss-service/apps/ivhzajp50hzo/18d01ad7-80ba-4eed-9575-2059ea43db3f.png) | 将密钥管理工具中的「应用公钥」粘贴至此。 |
+| **11** | ![image.png](https://env-00jxubkh7n2q.normal.cloudstatic.cn/weavefox/oss-service/apps/ivhzajp50hzo/9e97fa11-4263-4a1c-89aa-a8e29e1c61e1.png) | 复制密钥管理工具中的「应用公钥」粘贴到上图。 |
+
+**密钥工具使用步骤：**
+
+1. 打开支付宝密钥生成器
+2. 选择「RSA2」加密方式
+3. 点击「生成密钥」按钮
+4. 复制「应用公钥」粘贴到开放平台
+5. 保存好「应用私钥」文件
+
+### 第5步：提交审核
+
+| 流程 | 流程示意图 | 流程说明 |
+| :---: | :---: | --- |
+| **12** | ![image.png](https://env-00jxubkh7n2q.normal.cloudstatic.cn/weavefox/oss-service/apps/ivhzajp50hzo/d831ad90-a52e-4e75-b8fc-611295cefdb2.png) | 平台审核通过应用上架及签约申请后，就可以开启真实收款啦！ |
+
+---
+
+## 获取关键配置信息
+
+审核通过后，在应用详情页获取以下信息，用于 WeaveFox 配置：
+
+| 配置项 | 获取位置 | 用途 |
+|--------|----------|------|
+| **APPID** | 应用详情页顶部 | 应用唯一标识 |
+| **支付宝公钥** | 接口加签方式设置页 | 验证支付宝回调签名 |
+| **应用私钥** | 本地密钥工具生成 | 对支付请求进行签名 |
+
+---
+
+## WeaveFox 接入配置
+
+### 配置支付密钥
+
+1. 登录 WeaveFox 平台，进入「服务市场」→「支付服务」
+2. 点击「配置支付宝支付」
+3. 填写以下信息：
+   - **AppID**：从支付宝开放平台应用详情页获取
+   - **应用私钥**：使用密钥工具生成的私钥内容
+   - **支付宝公钥**：从支付宝开放平台「接口加签方式」页面获取
+4. 点击「保存并验证」
+
+![image.png](https://env-00jxubkh7n2q.normal.cloudstatic.cn/weavefox/oss-service/apps/ivhzajp50hzo/918efeb3-2b42-4c1b-947b-3131bcc6c3be.png)
+
+
+### 创建带支付功能的应用
+
+1. 在 WeaveFox 点击「创建应用」
+2. 与 AI 对话描述需求，例如：
+
+> 创建一个知识付费应用，用户可以浏览免费内容，付费内容需要支付宝支付后解锁。
+
+3. WeaveFox 会自动生成：
+   - 支付页面 UI
+   - 订单创建逻辑
+   - 支付状态处理
+
+### 支付流程说明
+
+```
+用户浏览应用 → 点击付费内容 → WeaveFox 创建订单
+                                    ↓
+                              调用支付宝接口
+                                    ↓
+用户扫码/登录支付 ← 展示支付二维码/页面 ← 返回支付链接
+                                    ↓
+支付完成 → 支付宝通知 WeaveFox → 自动解锁内容
+```
+
+### 关键配置参数
+
+WeaveFox 已封装好支付接口，你只需关注业务参数：
+
+| 参数 | 必填 | 说明 |
+|------|------|------|
+| `out_trade_no` | 是 | 商户订单号，WeaveFox 自动生成 |
+| `total_amount` | 是 | 订单金额，根据你的定价设置 |
+| `subject` | 是 | 订单标题，建议描述付费内容 |
+| `product_code` | 是 | 固定值 `FAST_INSTANT_TRADE_PAY` |
+
+### 订单管理
+
+WeaveFox 提供内置的订单管理功能：
+
+- **订单查询**：查看所有支付订单状态
+- **退款处理**：支持对订单发起退款
+- **对账功能**：导出交易记录进行财务核对
+- **支付统计**：查看收入趋势和支付转化率
+
+---
+
+## 常见问题
+
+### Q1：个人账号可以申请电脑网站支付吗？
+
+**可以。** 个人支付宝账号通过商家平台即可签约电脑网站支付，无需营业执照。
+
+### Q2：审核需要多久？
+
+通常 1-3 个工作日。若资料齐全、应用合规，审核速度会更快。
+
+### Q3：手续费是多少？
+
+支付宝电脑网站支付标准费率为 0.6%，具体以支付宝官方公示为准。
+
+### Q4：资金多久到账？
+
+实时到账至绑定的支付宝账号余额。
+
+### Q5：WeaveFox 如何处理支付结果？
+
+WeaveFox 已内置支付状态处理：
+- **同步通知**：支付完成后自动跳转回应用，展示支付结果
+- **异步通知**：WeaveFox 服务端接收支付宝推送，自动更新订单状态并解锁内容
+
+### Q6：支付安全如何保障？
+
+- 所有支付请求通过 HTTPS 加密传输
+- 密钥配置在 WeaveFox 服务端，不在前端暴露
+- 支付回调经过签名验证，确保来自支付宝
+- 敏感信息（私钥）由 WeaveFox 安全存储
+
+### Q7：电脑网站支付收款额度说明
+
+**基础限额规则**
+
+| 认证等级 | 单笔收款 | 单日收款 |
+|---------|---------|---------|
+| 未认证 | ≤ 50元 | ≤ 1000元 |
+| 基础认证 | ≤ 2000元 | ≤ 20000元 |
+
+**限额原因及解决方案**
+
+若开通时提交的资质未通过审核，会触发上述基础限额。
+
+### Q8：如何提升收款额度？
+
+如需提升收款额度：
+1. 登录支付宝商家平台
+2. 进入产品中心找到已开通的电脑网站支付
+3. 点击「提升额度」或「补全信息」
+4. 按提示提交更多资质材料，如：
+   - 更详细的经营信息
+   - 网站备案信息（近期 WeaveFox 将支持通过子域名实现 ICP 备案）
+   - 业务场景说明
+   - 其他补充材料
+
+提交后等待支付宝审核，审核通过后即可提升额度。
+
+也可以直接访问 [收单产品额度限制](https://b.alipay.com/page/self-relieving-web/productQuota/list) 页面申请提额。
+
+---
+
+## 相关资源
+
+- [支付宝商家平台](https://b.alipay.com/)
+- [支付宝开放平台](https://open.alipay.com/)
+- [电脑网站支付产品介绍](https://opendocs.alipay.com/support/01rau6)
+- [密钥工具下载](https://opendocs.alipay.com/common/02np94)
+- [电脑网站支付快速接入指南](https://opendocs.alipay.com/b/03ah5w?pathHash=4542d144)
+
+---
+
+如有疑问，可联系支付宝客服或在开放平台提交工单咨询。
