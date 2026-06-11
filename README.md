@@ -6,6 +6,9 @@
 
 ![WeaveFox 首页](/static/img/weavefox-home.png)
 
+> [!TIP]
+> 📚 推荐资源：[@weavefox/awesome-opc](https://www.npmjs.com/package/@weavefox/awesome-opc) — OPC 相关资源集合
+
 ## 文档内容
 
 本仓库包含 WeaveFox 产品的全部帮助文档，涵盖以下板块：
