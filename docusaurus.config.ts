@@ -6,7 +6,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
   title: 'WeaveFox',
-  tagline: '你的创意，值得让全世界看到',
+  tagline: '零门槛做应用，让创意看得见',
   favicon: 'img/favicon.ico',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future

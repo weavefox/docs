@@ -1,8 +1,8 @@
 # WeaveFox 文档
 
-[WeaveFox](https://www.weavefox.cn/) 是免费的 AIGC 创作平台，聚焦「应用生成 + 垂类场景创作工具」两大核心场景，为用户提供极致的创作与分享体验。只需简单的文字描述，就能将灵感转化为具象的现实。
+[WeaveFox](https://www.weavefox.cn/) 是**免费**的 AI 应用创作平台。无需代码，通过自然语言对话，自由创造个人专属的工具与独立应用。让创意即刻成形，一键即可分享给所有人使用。
 
-> 在线文档：[docs.weavefox.ai](https://docs.weavefox.ai)
+> 官方文档：[docs.weavefox.ai](https://docs.weavefox.ai)
 
 ![WeaveFox 首页](/static/img/weavefox-home.png)
 
@@ -34,6 +34,7 @@ WeaveFox 核心功能的使用指南：
 - **应用协作** — 邀请团队成员协作编辑，只读/读写权限管理
 - **发布应用** — 预览与发布的区别、访问控制、发布与下架操作
 - **自定义域名** — 为应用绑定自定义域名，提升品牌与 SEO
+- **数据分析** — 内置用户行为分析，自动采集 PV/UV、设备分布等数据，支持自定义事件埋点
 
 ### 集成服务（Integrations）
 
