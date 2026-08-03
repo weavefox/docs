@@ -2284,8 +2284,8 @@ packages:
     peerDependencies:
       ajv: ^6.9.1
 
-  ajv-keywords@5.1.1:
-    resolution: {integrity: sha512-qlCrSpzWXHzPNUzLfxiWMn1ZrLPBEmAdGIw+xmsD3JDAhSDxjot0q43uO1mk+wTNFGEr7Xc6cnwY33+4BaKodw==}
+  ajv-keywords@5.1.0:
+    resolution: {integrity: sha512-YCS/JNFAUyr5vAuhk1DWm1CBxRHW9LbJ2ozWeemrIqpbsqKjHVxYPyi5GC0rjZIT5JxJ3virVTS8wk4i/Z+krw==}
 
   ajv@6.15.0:
     resolution: {integrity: sha512-fgFx7Hfoq60ytK2c7DhnF8jIvzYgOMxfugjLOSMHjLIPgenqa7S7oaagATUq99mV6IYvN2tRmC0wnTYX6iPbMw==}
@@ -2541,7 +2541,7 @@ packages:
     engines: {node: '>=18.17'}
 
   cheerio@1.0.0-rc.12:
-    resolution: {integrity: sha512-Ei7DUCg3V0Fqjn4hsxFti3muvM9CMvFyH0QPwDZJMg71cQmiAUtnQhrmqU2pSN8J+RIHg72UoPBlY6RCSWTkGQ==}
+    resolution: {integrity: sha512-VqR8m68vM46BNnuZ5NtnGBKIE/DfN0cRIzg9n40EIq9NOv90ayxLBXA8fXC5gquFRGJSTRqBq25Jt2ECLR431Q==}
     engines: {node: '>= 6'}
 
   chokidar@3.6.0:
@@ -2842,7 +2842,7 @@ packages:
         optional: true
 
   debug@4.4.3:
-    resolution: {integrity: sha512-HAJOBmBAjgCWu9EqgW+JPwK/ANredks5yoaznWqopccruDm6Q/1XI5b3vhse2teaM7lNK9PYPhOBhv+vF8yY8Q==}
+    resolution: {integrity: sha512-RGwwWnwQvkVfavKVt22FGLw+xYSdzARwm0ru6DhTVA3umU5hZc28V3kO4stgYryrTlLpuvgI9GiijltAjNbcqA==}
     engines: {node: '>=6.0'}
     peerDependencies:
       supports-color: '*'
@@ -9417,7 +9417,7 @@ snapshots:
     dependencies:
       ajv: 6.15.0
 
-  ajv-keywords@5.1.1:
+  ajv-keywords@5.1.0:
     dependencies:
       ajv: 8.20.0
       fast-deep-equal: 3.1.3
@@ -12724,7 +12724,7 @@ snapshots:
       '@types/json-schema': 7.0.15
       ajv: 8.20.0
       ajv-formats: 2.1.1(ajv@8.20.0)
-      ajv-keywords: 5.1.1
+      ajv-keywords: 5.1.0
 
   search-insights@2.17.3: {}
 
