@@ -20,50 +20,47 @@ sidebar_position: 12
 
 ## 开通流程
 
-### 第1步：选择支付产品
+支付宝电脑网站支付可通过「AI 付」官网一站式快捷开通，全程在线完成。
 
-| 流程 | 流程示意图 | 流程说明 |
-| :---: | :---: | --- |
-| **1** | ![image.png](https://env-00jxubkh7n2q.normal.cloudstatic.cn/weavefox/oss-service/apps/ivhzajp50hzo/3d22c080-9c38-443e-9960-8b51e6645124.png) | 注册/登录支付宝商家平台。如遇以下页面，选择登录**个人账号**。 |
-| **2** | ![image.png](https://env-00jxubkh7n2q.normal.cloudstatic.cn/weavefox/oss-service/apps/ivhzajp50hzo/41b9f90e-6890-46a2-924a-23e7f92a9e5b.png) | 进入「[产品中心](https://b.alipay.com/page/product-workspace/all-product)」，选择我有电脑网站。 |
-| **3** | ![image.png](https://env-00jxubkh7n2q.normal.cloudstatic.cn/weavefox/oss-service/apps/ivhzajp50hzo/d7af3564-e4f1-4e24-a711-9cd03fa01483.png) | 点击「立即开通」。 |
+### 第1步：访问 AI 付开通页面
 
-### 第2步：上传开通资料
+进入 [**https://aipay.alipay.com/open-flow/tech**](https://aipay.alipay.com/open-flow/tech)，选择「AI 网页应用收款」产品，使用支付宝 App 扫码验证身份，即可进入一站式接入流程。整个流程包含五个步骤，按顺序完成即可。
 
-| 流程 | 流程示意图 | 流程说明 |
-| :---: | :---: | --- |
-| **4** | ![image.png](https://env-00jxubkh7n2q.normal.cloudstatic.cn/weavefox/oss-service/apps/ivhzajp50hzo/3c98c010-05b9-4888-9ada-b9146660ab01.png) <br/> ![image.png](https://env-00jxubkh7n2q.normal.cloudstatic.cn/weavefox/oss-service/apps/ivhzajp50hzo/b1f32d14-34ec-40fc-89c1-bc2ac8d31776.png) | 根据开通要求填写、上传相关信息。以电脑网站支付为例。<br/>**注意：营业执照非必须上传** |
-| **5** | ![image.png](https://env-00jxubkh7n2q.normal.cloudstatic.cn/weavefox/oss-service/apps/ivhzajp50hzo/35d57238-3ff3-4544-ba5f-b3db4f86d50c.png) <br/> ![image.png](https://env-00jxubkh7n2q.normal.cloudstatic.cn/weavefox/oss-service/apps/ivhzajp50hzo/22890602-a0aa-46f5-a59a-ea4be5fa48c7.png) | 申请后，可回到对应页面查看审核状态。以电脑网站支付为例，如审核完毕则状态为「已开通」，且会收到短信提醒。<br/>*如果需要提升收款额度，可以进一步提交资质申请，如图「补全信息」或「提升额度」。* |
+![](https://intranetproxy.alipay.com/skylark/lark/0/2026/png/111765/1785394661067-bb69579d-d814-45f7-808c-5ef371c8d77d.png)
 
-### 第3步：创建应用
+### 第2步：技术集成
 
-| 流程 | 流程示意图 | 流程说明 |
-| :---: | :---: | --- |
-| **6** | ![image.png](https://env-00jxubkh7n2q.normal.cloudstatic.cn/weavefox/oss-service/apps/ivhzajp50hzo/4477146a-3e51-4c4d-814b-1d5869184851.png) | 进入支付宝开放平台-控制台 [https://open.alipay.com/develop/manage](https://open.alipay.com/develop/manage)<br/>按需选择应用类型，创建应用。以网页/移动应用为例。<br/>*创建的应用须与签约的支付产品一致，否则无法收款。* |
-| **7** | ![image.png](https://env-00jxubkh7n2q.normal.cloudstatic.cn/weavefox/oss-service/apps/ivhzajp50hzo/7a0c909c-1f9b-4141-ab42-06964d07a8ba.png) | 填写创建应用相关信息。 |
+WeaveFox 已经集成了收款能力，这一步直接跳过。
 
-### 第4步：配置秘钥
+> 提示：技术集成可以与产品开通并行进行，无需等待产品开通审核完成。如需自行开发，建议先使用沙箱环境完成集成和测试。
 
-| 流程 | 流程示意图 | 流程说明 |
-| :---: | :---: | --- |
-| **8** | ![image.png](https://env-00jxubkh7n2q.normal.cloudstatic.cn/weavefox/oss-service/apps/ivhzajp50hzo/20dec513-7bec-457b-993d-0145d11883b4.png) | 配置接口加签方式：密钥或者证书 |
-| **9** | ![image.png](https://env-00jxubkh7n2q.normal.cloudstatic.cn/weavefox/oss-service/apps/ivhzajp50hzo/7e49e417-8a90-4828-b0a6-b888e9a66e58.png) | 下载并安装密钥工具。 |
-| **10** | ![image.png](https://env-00jxubkh7n2q.normal.cloudstatic.cn/weavefox/oss-service/apps/ivhzajp50hzo/18d01ad7-80ba-4eed-9575-2059ea43db3f.png) | 将密钥管理工具中的「应用公钥」粘贴至此。 |
-| **11** | ![image.png](https://env-00jxubkh7n2q.normal.cloudstatic.cn/weavefox/oss-service/apps/ivhzajp50hzo/9e97fa11-4263-4a1c-89aa-a8e29e1c61e1.png) | 复制密钥管理工具中的「应用公钥」粘贴到上图。 |
+### 第3步：产品开通
 
-**密钥工具使用步骤：**
+在开通页面填写基础资料信息，确认开通「电脑网站支付」产品。资料信息可去账号中心维护管理。
 
-1. 打开支付宝密钥生成器
-2. 选择「RSA2」加密方式
-3. 点击「生成密钥」按钮
-4. 复制「应用公钥」粘贴到开放平台
-5. 保存好「应用私钥」文件
+![](https://intranetproxy.alipay.com/skylark/lark/0/2026/png/111765/1786333296210-46e7dba3-3024-48ff-a640-4396c03bda20.png)
 
-### 第5步：提交审核
+开通后产品状态显示为「已开通」，生效后长期有效，支持快捷即时到账。
 
-| 流程 | 流程示意图 | 流程说明 |
-| :---: | :---: | --- |
-| **12** | ![image.png](https://env-00jxubkh7n2q.normal.cloudstatic.cn/weavefox/oss-service/apps/ivhzajp50hzo/d831ad90-a52e-4e75-b8fc-611295cefdb2.png) | 平台审核通过应用上架及签约申请后，就可以开启真实收款啦！ |
+### 第4步：密钥配置
+
+在密钥配置步骤中，下载密钥生成工具（支付宝开放平台开发助手），生成 RSA2（2048 位）应用公钥和应用私钥。
+
+![](https://intranetproxy.alipay.com/skylark/lark/0/2026/png/111765/1785395256196-fd4a16d1-c4f4-4457-a5cf-097e995d8bf1.png)
+
+- **应用公钥**：粘贴到支付宝开放平台「填写公钥字符」处，用于支付宝校验你发起请求的真伪
+- **应用私钥**：自己妥善保管，后续在 WeaveFox 支付配置中使用
+- **支付宝公钥**：提交应用公钥后自动生成，用于验证支付宝返回结果的真实性
+
+![](https://intranetproxy.alipay.com/skylark/lark/0/2026/png/111765/1785395201779-90d82c27-bb26-40c5-ad27-c631a48ba3ba.png)
+
+> **安全提醒**：应用私钥（你的专属印章）绝不能上传或分享给任何人，只需存在自己的服务器上。
+
+### 第5步：线上验证
+
+将代码中的沙箱配置替换为线上真实配置后，发起一笔真实交易验证支付全链路。WeaveFox 用户可以直接在支付宝服务页配置 AppID、支付宝公钥、应用私钥完成接入。
+
+[https://www.weavefox.cn/vault/services/alipay-aipay](https://www.weavefox.cn/vault/services/alipay-aipay)
 
 ---
 
