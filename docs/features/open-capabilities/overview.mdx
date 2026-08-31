@@ -1,0 +1,106 @@
+---
+title: 智能体接入
+sidebar_position: 1
+---
+
+# 通过其它智能体工具使用 WeaveFox
+
+WeaveFox 提供开放能力，支持 AI 智能体工具（如 Claude Code、Codex、Cursor 等）以标准化方式接入并管理你的应用——查询应用列表、更新应用信息、向应用智能体发送消息等。
+
+- **前置准备**：创建一个 API Key 作为鉴权凭证
+- **两种连接方式**：MCP Server 与 Agent Skill，任选其一即可接入
+
+:::tip[两种连接方式]
+
+无论使用 MCP Server 还是 Agent Skill，底层都调用同一组 WeaveFox 开放能力，区别仅在于接入形式与适用场景：
+
+- **MCP Server**：AI 工具原生支持 MCP 协议时，在配置文件中声明即可接入
+- **Agent Skill**：通过向 AI 工具安装技能插件来实现接入
+
+:::
+
+## 前置准备：创建 API Key
+
+API Key 用于授权 AI 智能体工具访问 WeaveFox 开放能力，是两种连接方式共同的前置凭证：
+
+1. 进入工作台，点击左侧导航的**智能体接入**入口
+2. 在弹窗中切换到 **API Keys** 标签页
+3. 点击右上角**创建 Key**，填写名称并选择有效期（7 天 / 30 天 / 90 天 / 365 天）
+4. 创建成功后会**一次性**展示完整密钥（raw key），请立即复制保存——关闭后无法再次获取
+5. 将该 Key 在 MCP 配置或 Skill 登录授权环节中使用
+
+API Key 的调用频率上限为每分钟 20 次请求。后续可在 API Keys 页面对 Key 进行禁用、启用或删除操作。
+
+## 方式一：MCP Server
+
+MCP（Model Context Protocol）是一种开放协议，允许 AI 智能体工具以标准化方式连接到 WeaveFox 并直接管理你的应用。
+
+:::note
+
+配置前请先在 API Keys 页面创建一个 API Key。
+
+:::
+
+### 配置方式
+
+将以下内容复制到你的 AI 工具的 MCP 配置文件中，并把 `<YOUR_API_KEY>` 替换为上一步获取的 API Key：
+
+```json
+{
+  "mcpServers": {
+    "WeaveFox MCP": {
+      "url": "https://www.weavefox.cn/mcp",
+      "transport": "sse",
+      "headers": {
+        "Authorization": "Bearer <YOUR_API_KEY>"
+      }
+    }
+  }
+}
+```
+
+配置完成后，AI 工具会自动发现并调用 WeaveFox 提供的开放能力，无需额外安装步骤。更多 MCP 介绍可参考 [MCP 官方文档](https://modelcontextprotocol.io/)。
+
+## 方式二：Agent Skill
+
+Agent Skill 是一种可复用的能力封装，允许 AI 智能体工具基于 WeaveFox 提供的开放能力来管理你的应用。Skill 通过在 AI 工具中安装技能插件来接入，与 MCP Server 提供的能力完全一致。
+
+### 安装技能
+
+在支持的 AI 工具中运行以下命令安装 WeaveFox Skill：
+
+```bash
+npx skills add https://github.com/weavefox/weavefox-cli --skill weavefox
+```
+
+如果你的 AI 工具支持通过提示词安装技能，也可直接复制以下提示词让其自动完成安装：
+
+```text
+运行 `npx skills use "https://github.com/weavefox/weavefox-cli" --skill "weavefox"` 并立即按照生成的 Skill 说明执行。读取完整输出，必要时先将输出重定向到临时文件。从其提供的 supporting-files 目录解析相对路径。
+```
+
+### 登录授权
+
+安装技能后，按以下步骤完成授权：
+
+1. 在 **API Keys** 页面创建一个 API Key（参考前置准备）
+2. 按技能提示执行登录命令：
+
+```bash
+wf login --key <YOUR_API_KEY>
+```
+
+3. 授权成功后即可在 AI 工具中调用 WeaveFox 开放能力
+
+## 开放能力
+
+无论选择 MCP Server 还是 Agent Skill，接入后可使用的开放能力一致：
+
+| 能力             | 说明                                                       |
+| ---------------- | ---------------------------------------------------------- |
+| 获取当前用户信息 | 查询当前 API Key 对应的用户资料                            |
+| 查看应用列表     | 分页查询你的应用，支持关键词搜索                           |
+| 更新应用信息     | 更新应用名称、描述、标签、封面图片、公开状态、个性化域名等 |
+| 发送消息         | 向应用的智能体发送消息，用于迭代应用功能                   |
+| 查询消息状态     | 获取应用智能体的消息状态和内容                             |
+| 查询消息列表     | 分页查询应用消息列表，按时间倒序排列                       |
