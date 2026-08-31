@@ -1,0 +1,13 @@
+diff --git a/src/CopyPageButton.js b/src/CopyPageButton.js
+index 4e744c7e91d11908c65ba7162acc1ae4e2d5afb8..8f567038c01eff011c5b0869bc072d0328a532c0 100644
+--- a/src/CopyPageButton.js
++++ b/src/CopyPageButton.js
+@@ -290,7 +290,7 @@ Please provide a clear summary and help me understand the key concepts covered i
+     }
+ 
+     try {
+-      const blob = new Blob([contentToView], { type: "text/plain" });
++      const blob = new Blob([contentToView], { type: "text/plain;charset=utf-8" });
+       const url = URL.createObjectURL(blob);
+       window.open(url, "_blank");
+     } catch (err) {

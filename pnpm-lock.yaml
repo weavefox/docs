@@ -4,6 +4,11 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
+patchedDependencies:
+  docusaurus-plugin-copy-page-button@0.8.4:
+    hash: 3424bab45c66a14af604fba8c5ac59c9b1723262b204ba126e962f406c462d66
+    path: patches/docusaurus-plugin-copy-page-button@0.8.4.patch
+
 importers:
 
   .:
@@ -28,7 +33,7 @@ importers:
         version: 2.1.1
       docusaurus-plugin-copy-page-button:
         specifier: ^0.8.4
-        version: 0.8.4(@docusaurus/core@3.10.1(@docusaurus/faster@3.10.1(@docusaurus/types@3.10.1(@swc/core@1.15.47)(postcss@8.5.25)(react-dom@19.2.8(react@19.2.8))(react@19.2.8))(postcss@8.5.25))(@mdx-js/react@3.1.1(@types/react@19.2.17)(react@19.2.8))(@rspack/core@1.7.12)(@swc/core@1.15.47)(postcss@8.5.25)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)(typescript@6.0.3))(react@19.2.8)
+        version: 0.8.4(patch_hash=3424bab45c66a14af604fba8c5ac59c9b1723262b204ba126e962f406c462d66)(@docusaurus/core@3.10.1(@docusaurus/faster@3.10.1(@docusaurus/types@3.10.1(@swc/core@1.15.47)(postcss@8.5.25)(react-dom@19.2.8(react@19.2.8))(react@19.2.8))(postcss@8.5.25))(@mdx-js/react@3.1.1(@types/react@19.2.17)(react@19.2.8))(@rspack/core@1.7.12)(@swc/core@1.15.47)(postcss@8.5.25)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)(typescript@6.0.3))(react@19.2.8)
       docusaurus-plugin-llms:
         specifier: ^0.5.1
         version: 0.5.1(@docusaurus/core@3.10.1(@docusaurus/faster@3.10.1(@docusaurus/types@3.10.1(@swc/core@1.15.47)(postcss@8.5.25)(react-dom@19.2.8(react@19.2.8))(react@19.2.8))(postcss@8.5.25))(@mdx-js/react@3.1.1(@types/react@19.2.17)(react@19.2.8))(@rspack/core@1.7.12)(@swc/core@1.15.47)(postcss@8.5.25)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)(typescript@6.0.3))
@@ -10155,7 +10160,7 @@ snapshots:
     dependencies:
       '@leichtgewicht/ip-codec': 2.0.5
 
-  docusaurus-plugin-copy-page-button@0.8.4(@docusaurus/core@3.10.1(@docusaurus/faster@3.10.1(@docusaurus/types@3.10.1(@swc/core@1.15.47)(postcss@8.5.25)(react-dom@19.2.8(react@19.2.8))(react@19.2.8))(postcss@8.5.25))(@mdx-js/react@3.1.1(@types/react@19.2.17)(react@19.2.8))(@rspack/core@1.7.12)(@swc/core@1.15.47)(postcss@8.5.25)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)(typescript@6.0.3))(react@19.2.8):
+  docusaurus-plugin-copy-page-button@0.8.4(patch_hash=3424bab45c66a14af604fba8c5ac59c9b1723262b204ba126e962f406c462d66)(@docusaurus/core@3.10.1(@docusaurus/faster@3.10.1(@docusaurus/types@3.10.1(@swc/core@1.15.47)(postcss@8.5.25)(react-dom@19.2.8(react@19.2.8))(react@19.2.8))(postcss@8.5.25))(@mdx-js/react@3.1.1(@types/react@19.2.17)(react@19.2.8))(@rspack/core@1.7.12)(@swc/core@1.15.47)(postcss@8.5.25)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)(typescript@6.0.3))(react@19.2.8):
     dependencies:
       '@docusaurus/core': 3.10.1(@docusaurus/faster@3.10.1(@docusaurus/types@3.10.1(@swc/core@1.15.47)(postcss@8.5.25)(react-dom@19.2.8(react@19.2.8))(react@19.2.8))(postcss@8.5.25))(@mdx-js/react@3.1.1(@types/react@19.2.17)(react@19.2.8))(@rspack/core@1.7.12)(@swc/core@1.15.47)(postcss@8.5.25)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)(typescript@6.0.3)
       react: 19.2.8
