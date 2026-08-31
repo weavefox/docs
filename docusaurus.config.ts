@@ -68,6 +68,62 @@ const config: Config = {
     ],
   ],
 
+  plugins: [
+    [
+      'docusaurus-plugin-copy-page-button',
+      {
+        // Only show copy and view actions (hide AI tools)
+        enabledActions: ['copy', 'view', 'mcp-copy'],
+        mcpServer: {
+          name: 'WeaveFox MCP',
+          url: 'https://www.weavefox.cn/mcp',
+          transport: 'sse',
+          headers: {
+            Authorization: 'Bearer <YOUR__API_KEY>',
+          },
+        },
+        labels: {
+          button: { label: '复制本页面' },
+          copy: {
+            title: '复制本页面',
+            description: '将本页面复制为 Markdown',
+          },
+          view: {
+            title: '以 Markdown 查看',
+            description: '查看本页面的 Markdown 格式',
+          },
+          mcpCopy: {
+            title: '复制 MCP 配置',
+            description: '复制 MCP Server JSON 配置',
+          },
+        },
+      },
+    ],
+    [
+      'docusaurus-plugin-llms',
+      {
+        title: 'WeaveFox 产品文档',
+        description:
+          'WeaveFox 是免费的 AI 应用创作平台。无需代码，通过自然语言对话，自由创造个人专属的工具与独立应用。让创意即刻成形，一键即可分享给所有人使用。',
+        // 与站点搜索一致：不纳入博客内容
+        includeBlog: false,
+        // Content cleaning options
+        excludeImports: true,
+        removeDuplicateHeadings: true,
+        // Generate individual markdown files following llmstxt.org specification
+        generateMarkdownFiles: true,
+        // 按站点导航栏顺序：介绍 → 产品功能 → 集成服务 → 最佳实践
+        includeOrder: [
+          'intro/**/*',
+          'features/**/*',
+          'integrations/**/*',
+          'best-practices/**/*',
+        ],
+        includeUnmatchedLast: true,
+      },
+    ],
+  ],
+
   clientModules: ['./src/clientModules/navbar-scroll-shadow'],
 
   themes: [
@@ -173,7 +229,7 @@ const config: Config = {
           title: 'WeaveFox',
           items: [
             {
-              html: '<a href="https://www.weavefox.cn" target="_blank"><b>你的创意，值得让全世界看到</b></a>',
+              html: '<a href="https://www.weavefox.cn" target="_blank"><b>零门槛做应用，让创意看得见</b></a>',
             },
           ],
         },
