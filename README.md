@@ -4,6 +4,12 @@
 
 > 官方文档：[docs.weavefox.ai](https://docs.weavefox.ai)
 
+> [!NOTE]
+> 提供面向 LLM 优化的文档，供 AI 工具（如 Claude Code、Codex、Cursor 等）直接读取：
+>
+> - [llms.txt](https://docs.weavefox.ai/llms.txt) — 精简版文档摘要，适合快速了解平台能力
+> - [llms-full.txt](https://docs.weavefox.ai/llms-full.txt) — 详细版文档，包含所有细节与示例
+
 ![WeaveFox 首页](/static/img/weavefox-home.png)
 
 > [!TIP]
