@@ -143,7 +143,7 @@ const config: Config = {
   themeConfig: {
     // SEO social card - 在社交媒体分享时显示的卡片图片
     image:
-      'https://mdn.alipayobjects.com/huamei_4qpv3u/afts/img/AW2fQKp5vEIAAAAAQMAAAAgAeocTAQFr/original',
+      'https://mdn.alipayobjects.com/huamei_4qpv3u/afts/img/AmsmRLAXovQAAAAAQYAAAAgAeocTAQFr/original',
 
     // SEO: 全局 meta 标签
     metadata: [
@@ -163,7 +163,7 @@ const config: Config = {
       '@type': 'Organization',
       name: 'WeaveFox',
       url: 'https://www.weavefox.cn',
-      logo: 'https://mdn.alipayobjects.com/huamei_4qpv3u/afts/img/AW2fQKp5vEIAAAAAQMAAAAgAeocTAQFr/original',
+      logo: 'https://mdn.alipayobjects.com/huamei_4qpv3u/afts/img/AmsmRLAXovQAAAAAQYAAAAgAeocTAQFr/original',
       sameAs: ['https://x.com/weavefox', 'https://github.com/weavefox/weavefox'],
     },
 
@@ -183,7 +183,7 @@ const config: Config = {
       title: 'WeaveFox',
       logo: {
         alt: 'WeaveFox Logo',
-        src: 'https://mdn.alipayobjects.com/huamei_4qpv3u/afts/img/AW2fQKp5vEIAAAAAQMAAAAgAeocTAQFr/original',
+        src: 'https://mdn.alipayobjects.com/huamei_4qpv3u/afts/img/RAWoRKSLjPgAAAAAQCAAAAgAeocTAQFr/original',
       },
       items: [
         {

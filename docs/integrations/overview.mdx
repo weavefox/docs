@@ -64,19 +64,20 @@ WeaveFox 平台提供了一些内置云服务，这些默认启用且无需授�
 
 #### 数据库
 
-- [AppBase](/integrations/apps/appwrite) - BaaS 平台，提供数据库、认证、存储、实时订阅等
-- [Supabase](/integrations/apps/supabase) - 开源 Firebase 替代方案，提供 PostgreSQL 数据库、认证、存储等
+- [AppBase](/integrations/apps/appwrite) - OceanBase BaaS 服务，提供数据库存储、用户登录认证等后端能力
+- [Supabase](/integrations/apps/supabase) - 三方数据存储方案，连接 Supabase 数据库，实现数据持久化存储和实时同步功能
 
 #### 存储
 
-- [OSS 存储](/integrations/apps/oss) - 阿里云对象存储服务，用于文件存储和 CDN 分发
+- [OSS 存储](/integrations/apps/oss) - 静态资源存储服务，支持图片、音视频及各类文件上传，单文件最大 100MB
 
 #### AI 服务
 
-- [LLM 服务](/integrations/apps/llm) - 大语言模型服务，支持多种模型接入
-- [图像生成与编辑服务](/integrations/apps/image) - AI 图像生成和编辑能力
-- [音频识别服务](/integrations/apps/audio) - 语音转文字、音频处理能力
-- [OCR 识别服务](/integrations/apps/ocr) - 文字识别、文档扫描能力
+- [LLM 服务](/integrations/apps/llm) - 提供大语言模型调用能力，支持文本生成、对话等 AI 功能
+- [图像生成](/integrations/apps/image) - 支持文生图、图像编辑、换背景、换材质、角色一致性创作等多种图像生成场景
+- [音频识别](/integrations/apps/audio) - 支持语音转文字、音频理解、情感识别等多种音频处理场景
+- [OCR 识别](/integrations/apps/ocr) - 支持图片文字识别、表格提取、发票识别、证件识别等多种 OCR 场景
+- [内容安全检测](/integrations/apps/security-check) - 为应用提供文本、图片及图文组合的内容安全检测能力
 
 #### 搜索服务
 
@@ -84,21 +85,22 @@ WeaveFox 平台提供了一些内置云服务，这些默认启用且无需授�
 
 #### 消息推送
 
-- [钉钉消息推送](/integrations/apps/dingtalk) - 钉钉群机器人消息推送
-- [邮件推送](/integrations/apps/email) - 邮件发送服务
+- [钉钉消息推送](/integrations/apps/dingtalk) - 钉钉群消息推送服务，通过钉钉机器人 webhook 发送消息到钉钉群
+- [邮件服务](/integrations/apps/email) - 为应用提供邮件发送能力，支持通知邮件、报告邮件、联系表单、验证码邮件等场景
 
 #### 地图
 
-- [地图服务](/integrations/apps/amap) - 高德地图服务，支持定位、导航等功能
+- [高德地图服务](/integrations/apps/amap) - 提供地图定位、地理编码、POI 搜索、路径规划等位置服务能力
 
 #### 数据分析
 
-- [用户行为埋点](/integrations/apps/tracking) - 轻量级 Web 埋点 SDK，采集自定义事件数据（默认启用）
+- [用户行为埋点](/integrations/apps/tracking) - 为 Vibe Coding 生成的应用提供用户行为埋点能力，采集自定义事件，并呈现和分析用户行为数据
 
 #### 登录认证
 
-- [支付宝 OpenID 服务](/integrations/apps/alipay-open-id) - 支付宝快捷登录能力
+- [支付宝 H5 应用登录](/integrations/apps/alipay-open-id) - 面向在支付宝 App 内打开的 H5 应用，实现支付宝一键登录
 
 #### 支付服务
 
-- [支付宝电脑网站支付](/integrations/apps/alipay-payment) - 支付宝 PC 端网页支付能力
+- [支付宝支付](/integrations/apps/alipay-payment) - 支持创建支付订单、查询交易状态、退款、关闭订单等支付宝支付能力
+- [Vibe Pay](/integrations/apps/vibe-pay) - 创建并上架线上电子商品，绑定商家支付宝实现收款
